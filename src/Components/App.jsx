@@ -3,9 +3,9 @@ import Tela02 from './Tela02';
 
 export default function App(){
 
-    const [tela, setTela] = useState(0)
+    const [tela, setTela] = useState(false)
     
-    if (tela === 1) return (
+    if (tela === true) return (
         <Tela02/>
     )
 
@@ -13,7 +13,7 @@ export default function App(){
         <div className="inicio">
             <img src="assets/img/logo.png"/>
             <h1>ZapRecall</h1>
-            <button name="button" onClick={()=> setTela(1)}>Iniciar Recall!</button>
+            <button name="button" onClick={()=> setTela(true)}>Iniciar Recall!</button>
         </div>
     )
         
