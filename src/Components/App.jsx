@@ -1,12 +1,12 @@
 import {useState} from 'react';
-import Tela02 from './Tela02';
+import Flashcards from './Flashcards';
 
 export default function App(){
 
     const [tela, setTela] = useState(false)
     
     if (tela === true) return (
-        <Tela02/>
+        <Flashcards/>
     )
 
     return(

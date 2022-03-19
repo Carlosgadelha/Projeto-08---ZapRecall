@@ -117,11 +117,56 @@ body{
     margin-bottom: 5px;
 }
 
+
+
 .perguntaCard p {
     margin-top: 26px;
     margin-left: 6px;
 
 }
+
+.respostaCard{
+    width: 90%;
+    /* height: 120px; */
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.respostaCard p {
+    margin-top: 26px;
+    margin-left: 15px;
+    margin-bottom: 25px;
+
+}
+
+.respostaCard .opcoes{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 15px;
+}
+
+.respostaCard button{
+    
+    font-family: 'Recursive';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    display: flex;
+    text-align: center;
+    width: 85.17px;
+    height: 37.17px;
+    border-radius: 5px;
+    color: #FFFFFF;
+    margin-bottom: 6px;
+}
+.buttonNaoLembrei{  background: #FF3030; }
+.buttonQuaseLembrei{  background: #FF922E;}
+.buttonZap{  background: #2FBE34; }
 
 .tela02 footer{
     width: 100%;
@@ -144,5 +189,6 @@ body{
     line-height: 14px;
     color: #333333;
 }
+
 
 
