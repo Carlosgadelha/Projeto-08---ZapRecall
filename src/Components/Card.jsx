@@ -45,44 +45,54 @@ function Card(props){
     }else{ 
 
         const css = `pergunta ${cor}`
+
         switch (cor) {
             case "vermelho":
                 return(
-                    <div className = {css}>
-                        <p>{props.card}</p> 
+                    <CardPergunta css = {css} card = {props.card}>
                         < IoCloseCircle/>
-                    </div>
+                    </CardPergunta>  
                 )
                 break;
 
             case "verde":
                 return(
-                    <div className = {css}>
-                        <p>{props.card}</p>
+
+                    <CardPergunta css = {css} card = {props.card}>
                         < IoCheckmarkCircle/>
-                    </div>
+                    </CardPergunta>  
+
                 )
                 break;
 
             case "amarelo":
                 return(
-                    <div className = {css}>
-                        <p>{props.card}</p>
+                    <CardPergunta css = {css} card = {props.card}>
                         < IoAlertCircle/>
-                    </div>
+                    </CardPergunta>  
                 )
                 break;
         
         }
 
         return(
-            <div className = {css}>
-                <p>{props.card}</p>
+            <CardPergunta css = {css} card = {props.card}>
                 < IoPlayOutline onClick={()=> setMostrarPergunta(true)}/>
-            </div>
+            </CardPergunta>   
         )
     }
     
+}
+
+function CardPergunta(props) {
+    return (
+        <div className = {props.css}>
+                <div className = "conteudo">
+                    <p>{props.card}</p>
+                    {props.children}
+                </div>
+         </div>
+    )
 }
 
 
