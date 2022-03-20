@@ -12,7 +12,17 @@ function Card(props){
 
     function responderPerguntas(cor){
         setMostrarPergunta(false)
-        props.atualizarRespondidos()
+
+        if(cor === 'vermelho'){
+            props.atualizarRespondidos(< IoCloseCircle className="vermelho"/>,'vermelho')
+        }else{
+            if(cor === 'verde'){ 
+                props.atualizarRespondidos(< IoCheckmarkCircle className="verde"/>,'verde')
+            }else{      
+                props.atualizarRespondidos(< IoAlertCircle className="amarelo"/>,'amarelo')
+            }
+        }
+        
         setCor(cor)
     }
 
@@ -48,6 +58,7 @@ function Card(props){
 
         switch (cor) {
             case "vermelho":
+                
                 return(
                     <CardPergunta css = {css} card = {props.card}>
                         < IoCloseCircle/>
@@ -56,6 +67,7 @@ function Card(props){
                 break;
 
             case "verde":
+                
                 return(
 
                     <CardPergunta css = {css} card = {props.card}>
@@ -66,6 +78,7 @@ function Card(props){
                 break;
 
             case "amarelo":
+                
                 return(
                     <CardPergunta css = {css} card = {props.card}>
                         < IoAlertCircle/>
@@ -87,10 +100,10 @@ function Card(props){
 function CardPergunta(props) {
     return (
         <div className = {props.css}>
-                <div className = "conteudo">
-                    <p>{props.card}</p>
-                    {props.children}
-                </div>
+            <div className = "conteudo">
+                <p>{props.card}</p>
+                {props.children}
+            </div>
          </div>
     )
 }
