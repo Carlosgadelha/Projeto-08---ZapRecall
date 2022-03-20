@@ -1,5 +1,9 @@
 import {useState} from 'react';
-import Flashcards from './Flashcards';
+import Flashcards from './Flashcards/Flashcards';
+
+import "../assets/css/reset.css";
+import "../assets/css/estilos.css";
+import logo from "../assets/img/logo.png"
 
 export default function App(){
 
@@ -11,7 +15,7 @@ export default function App(){
 
     return(
         <div className="inicio">
-            <img src="assets/img/logo.png"/>
+            <img src={logo} />
             <h1>ZapRecall</h1>
             <button name="button" onClick={()=> setTela(true)}>Iniciar Recall!</button>
         </div>

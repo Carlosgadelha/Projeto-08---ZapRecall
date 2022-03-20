@@ -1,7 +1,10 @@
 import { IoCloseCircle} from "react-icons/io5";
 import { useState } from "react"
-import Footer from "./Footer"
-import Card from "./Card"
+import Footer from "../Footer/Footer"
+import Card from "../Card"
+
+import "./style.css"
+import logoPequeno from "../../assets/img/logo-pequeno.png"
 
 export default function Flashcards(){
 
@@ -15,7 +18,6 @@ export default function Flashcards(){
         if(cor === 'vermelho'){
             setEsqueceuPerguntas(true)
         }
-        console.log(esqueceuPerguntas)
     }
 
     const perguntas = [{titulo: 'O que é JSX?', resposta: 'Uma extensão de linguagem do JavaScript'}, 
@@ -34,7 +36,7 @@ export default function Flashcards(){
     //                    {titulo: 'Usamos props para __ ?', resposta: 'passar diferentes informações para componentes '},
     //                    {titulo: 'Usamos estado (state) para __ ?', resposta: 'dizer para o React quais informações quando atualizadas devem renderizar a tela novamente'}]
     return(
-        <div className="tela02">
+        <div className="flashcards">
             <Header/>
             <div className="cards">
                 {perguntas.map((pergunta, index) => <Card card={`pergunta 0${index+1}`} titulo={pergunta.titulo} resposta={pergunta.resposta } atualizarRespondidos = {atualizarRespondidos}/>)}
@@ -50,7 +52,7 @@ function Header(){
     return (
         <header>
             <figure>
-                <img src="assets/img/logo-pequeno.png"/>
+                <img src={logoPequeno}/>
                 <h1>ZapRecall</h1>
             </figure>
         </header>

@@ -1,4 +1,6 @@
-import { IoAlertCircle, IoCheckmarkCircle, IoCloseCircle} from "react-icons/io5";
+import "./style.css"
+import party from "../../assets/img/party.png"
+import sad from "../../assets/img/sad.png"
 
 function Footer(props){
 
@@ -8,10 +10,16 @@ function Footer(props){
         if(props.esqueceu){
             return(
                 <footer className="footerResultado">
-                    <figure>
-                       <h1> Putz...</h1> 
-                    </figure>
-                    <h1> Ainda faltam alguns... Mas não desanime!</h1>
+                    <div className="titulo">
+                        <img src={sad}/>
+                        <h1><b>Putz...</b> </h1> 
+                    </div>
+
+                    <div className= "texto">
+                        <h1> Ainda faltam alguns...</h1> 
+                        <h1> Mas não desanime!</h1>
+                    </div>
+                    
                     <h1> {props.qntPerguntasRespondidas}/{props.qntPerguntas} CONCLUÍDOS</h1>
                     <h2> {props.icons}</h2>
                 </footer>
@@ -22,10 +30,15 @@ function Footer(props){
 
         return(
             <footer className="footerResultado">
-                <figure>
-                   <h1> Parabéns!</h1> 
-                </figure>
-                <h1> Você não esqueceu de nenhum flashcard! </h1>
+                <div className="titulo">
+                    <img src={party}/>
+                   <h1> <b>Parabéns!</b></h1> 
+                </div>
+                <div className= "texto">
+                    <h1> Você não esqueceu</h1>
+                    <h1> de nenhum flashcard!</h1>
+                </div>
+                
                 <h1> {props.qntPerguntasRespondidas}/{props.qntPerguntas} CONCLUÍDOS</h1>
                 <h2> {props.icons}</h2>
             </footer>
