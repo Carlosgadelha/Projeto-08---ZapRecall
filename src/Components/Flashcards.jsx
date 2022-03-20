@@ -1,8 +1,14 @@
-
+import { useState } from "react"
 import Footer from "./Footer"
 import Card from "./Card"
 
 export default function Flashcards(){
+
+    const [perguntasRespondidas, setPerguntasRespondidas] = useState(0)
+
+    function atualizarRespondidos(){
+        setPerguntasRespondidas(perguntasRespondidas + 1)
+    }
 
 
     const perguntas = [{titulo: 'O que é JSX?', resposta: 'Uma extensão de linguagem do JavaScript'}, 
@@ -19,9 +25,9 @@ export default function Flashcards(){
                 <img src="assets/img/logo-pequeno.png"/>
                 <h1>ZapRecall</h1>
             </figure>
-            {perguntas.map((pergunta, index) => <Card card={`pergunta 0${index+1}`} titulo={pergunta.titulo} resposta={pergunta.resposta}/>)}
+            {perguntas.map((pergunta, index) => <Card card={`pergunta 0${index+1}`} titulo={pergunta.titulo} resposta={pergunta.resposta } atualizarRespondidos = {atualizarRespondidos}/>)}
 
-            <Footer qntPerguntas = {perguntas.length}/>
+            <Footer qntPerguntasRespondidas = {perguntasRespondidas} qntPerguntas = {perguntas.length}/>
             
         </div>
 

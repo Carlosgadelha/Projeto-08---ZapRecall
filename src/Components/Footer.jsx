@@ -1,7 +1,7 @@
 function Footer(props){
     return(
         <footer>
-                <h1> 0/{props.qntPerguntas} CONCLUÍDOS</h1>
+                <h1> {props.qntPerguntasRespondidas}/{props.qntPerguntas} CONCLUÍDOS</h1>
         </footer>
     )
 }
