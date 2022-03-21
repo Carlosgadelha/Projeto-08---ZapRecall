@@ -1,6 +1,4 @@
 body{
-    /* width: 203px;
-    height: 381px; */
     background-color: #FB6B6B;
 } 
 
@@ -23,10 +21,9 @@ body{
 }
 
 .inicio img{
-    margin-top: 90px;
-    /* width: 55px; */
-    width: 24.6%;
-    /* height: 65px; */
+    width: 136px;
+    height: 161px;
+    margin-bottom: 26px;
 }
 
 .inicio h1{
@@ -34,29 +31,32 @@ body{
     font-family: 'Righteous';
     font-style: normal;
     font-weight: 400;
-    font-size: 45px;
-    line-height: 31px;
+    font-size: 36px;
+    line-height: 45px;
     display: flex;
     align-items: center;
     text-align: center;
     letter-spacing: -0.012em;
+
     color: #FFFFFF;
 }
 
 .inicio button{
-    width: 40%;
-    height: 35px;
+    width: 246px;
+    height: 54px;
+    /* width: 40%;
+    height: 35px; */
     color: #D70900;
     font-family: 'Recursive';font-style: normal;
     font-weight: 400;
-    font-size: 12px;
+    font-size: 18px;
     line-height: 14px;
     text-align: center;
     background: #FFFFFF;
     border: 1px solid #D70900;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
-    margin-top: 73px;
+    margin-top: 30px;
 }
 
 

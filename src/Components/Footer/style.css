@@ -34,6 +34,7 @@ footer h2{
 
 .titulo {
     display: flex;
+    align-items: center;
     margin-bottom: 15px;
 }
 
