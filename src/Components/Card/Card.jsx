@@ -1,6 +1,8 @@
 import {useState} from 'react';
 import { IconContext } from "react-icons";
 import { IoPlayOutline, IoReloadOutline, IoAlertCircle, IoCheckmarkCircle, IoCloseCircle} from "react-icons/io5";
+import setinha from "../../assets/img/setinha.png"
+import "./style.css"
 
 
 function Card(props){
@@ -45,9 +47,7 @@ function Card(props){
             return(
                 <div className="perguntaCard">
                     <p>{props.titulo}</p>
-                    <IconContext.Provider value={{ size: 30, style: { position: 'absolute', bottom: 7, right: 7 } }}>
-                        < IoReloadOutline onClick={()=> setMostrarResposta(true)}/>
-                    </IconContext.Provider>
+                    <img src= {setinha} onClick={()=> setMostrarResposta(true)}/>
                     
                 </div>
             )
@@ -61,7 +61,7 @@ function Card(props){
                 
                 return(
                     <CardPergunta css = {css} card = {props.card}>
-                        < IoCloseCircle/>
+                        < IoCloseCircle className = "icons"/>
                     </CardPergunta>  
                 )
                 break;
@@ -71,7 +71,7 @@ function Card(props){
                 return(
 
                     <CardPergunta css = {css} card = {props.card}>
-                        < IoCheckmarkCircle/>
+                        < IoCheckmarkCircle className = "icons"/>
                     </CardPergunta>  
 
                 )
@@ -81,7 +81,7 @@ function Card(props){
                 
                 return(
                     <CardPergunta css = {css} card = {props.card}>
-                        < IoAlertCircle/>
+                        < IoAlertCircle className = "icons"/>
                     </CardPergunta>  
                 )
                 break;
@@ -90,7 +90,7 @@ function Card(props){
 
         return(
             <CardPergunta css = {css} card = {props.card}>
-                < IoPlayOutline onClick={()=> setMostrarPergunta(true)}/>
+                <b>< IoPlayOutline onClick={()=> setMostrarPergunta(true)} className = "icons"/></b>
             </CardPergunta>   
         )
     }
@@ -101,7 +101,7 @@ function CardPergunta(props) {
     return (
         <div className = {props.css}>
             <div className = "conteudo">
-                <p>{props.card}</p>
+                <p><b>{props.card}</b></p>
                 {props.children}
             </div>
          </div>

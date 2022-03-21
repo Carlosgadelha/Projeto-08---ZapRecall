@@ -1,0 +1,110 @@
+
+.pergunta{
+    width: 80%;
+    height: 65px;
+    display: flex;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    margin-bottom: 25px;
+}
+
+.pergunta .conteudo{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px 15px;
+}
+
+.perguntaCard{
+    width: 80%;
+    height: 120px;
+    display: flex;
+    background: #FFFFFF;
+    position: relative;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    margin-bottom: 25px;
+}
+
+
+.perguntaCard p {
+    font-size: 18px;
+    margin-top: 26px;
+    margin-left: 15px;
+
+}
+.pergunta .icons{
+    width: 23px;
+    height: 23px;
+}
+
+.respostaCard{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    margin-bottom: 25px;
+}
+
+.respostaCard p {
+    margin-top: 26px;
+    margin-left: 15px;
+    margin-bottom: 25px;
+
+}
+
+.respostaCard .opcoes{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 15px;
+}
+
+.respostaCard button{
+    
+    font-family: 'Recursive';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 85.17px;
+    height: 37.17px;
+    border-radius: 5px;
+    color: #FFFFFF;
+    margin-bottom: 6px;
+}
+.buttonNaoLembrei{  background: #FF3030; }
+.buttonQuaseLembrei{  background: #FF922E;}
+.buttonZap{  background: #2FBE34; }
+
+
+.perguntaCard img{
+    width: 30px;
+    height: 20px;
+    position: absolute;
+    bottom: 7px;
+    right: 15px;
+    color: #333333;
+}
+
+.verde { 
+    text-decoration:line-through;
+    color: #2FBE34;
+}
+
+.amarelo { 
+    text-decoration:line-through;
+    color: #FF922E;
+}
+
+.vermelho { 
+    text-decoration:line-through;
+    color: #FF3030;
+}
