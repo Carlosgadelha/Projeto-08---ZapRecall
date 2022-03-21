@@ -1,6 +1,5 @@
 import {useState} from 'react';
-import { IconContext } from "react-icons";
-import { IoPlayOutline, IoReloadOutline, IoAlertCircle, IoCheckmarkCircle, IoCloseCircle} from "react-icons/io5";
+import { IoPlayOutline, IoAlertCircle, IoCheckmarkCircle, IoCloseCircle} from "react-icons/io5";
 import setinha from "../../assets/img/setinha.png"
 import "./style.css"
 
